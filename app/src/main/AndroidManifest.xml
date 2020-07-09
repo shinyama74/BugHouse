@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.nickname.myoji.bughouse">
+<!--    Imageview.loadでのネット接続を許可-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +13,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CountActivity" />
         <activity android:name=".LoadActivity" />
+        <!-- Manifestにactivityとして登録されてない /// アプリが落ちる原因      -->
+        <activity android:name=".ListActivity" />
+        <activity android:name=".SaveActivity" />
+
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".launcher.LauncherActivity">
             <intent-filter>

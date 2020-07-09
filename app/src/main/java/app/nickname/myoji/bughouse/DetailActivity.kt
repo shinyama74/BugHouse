@@ -8,8 +8,10 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+//         (5-3)id不一致
+//        val text = intent.getStringExtra("TODO_NAME")
 
-        val text = intent.getStringExtra("TODO_NAME")
+        val text = intent.getStringExtra("TASK_NAME")
         textView.text = text
 
         backButton.setOnClickListener {

@@ -22,6 +22,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+//追記:coil用(Imageview.load)
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
