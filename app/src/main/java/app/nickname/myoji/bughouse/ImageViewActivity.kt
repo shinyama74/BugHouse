@@ -36,8 +36,11 @@ class ImageViewActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 1 && resultCode == Activity.RESULT_CANCELED) {
-//            imageView.load(data?.data)
+//          if (requestCode == 1 && resultCode == Activity.RESULT_CANCELED) {
+        //REQUEST_CODEとRESULT_OK
+        if (requestCode == 100 && resultCode == Activity.RESULT_OK) {
+            val imageView=findViewById<ImageView>(R.id.imageView)
+            imageView.load(data?.data)
         }
     }
 }
